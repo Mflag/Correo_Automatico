@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    display:flex ;
+    margin: 0; 
+    padding: 0; 
+}
+#menu{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 100vh;
+    background-color:#3a3939;
+}
+#menu ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+#menu ul li {
+    background-color:#3a3939;
+}
+
+#menu ul a {
+    display:block;
+    color:#fff;
+    text-decoration:none;
+    font-weight:400;
+    font-size:15px;
+    padding:10px;
+    letter-spacing:1px;
+   }
+   
+#menu ul li {
+    margin:0;
+    padding:0;
+   }
+   
+#menu ul li:hover {
+    background:#5f5e5e;
+   }
+
+#menu ul ul {
+    overflow:hidden;
+    max-height: 0;
+    top:100%;
+    left:0;
+    background:rgb(0, 0, 0);
+    padding:0;
+    transition: max-height 300ms;
+    /*transition-property: height;
+    transition-duration: 1000ms;*/
+   }
+   
+#menu ul ul li {
+    background:rgb(24, 23, 23);
+    
+   }
+   
+#menu ul ul a {
+    line-height:120%;
+    padding:10px 15px;
+   }
+   
+#menu ul li:target ul {
+    transition: max-height 1000ms;
+    display: block;
+    max-height: 999px;
+   }
+
+/*TABLAS*/
+table{
+	background-color: white;
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td{
+	padding: 20px;
+}
+
+thead{
+	background-color: #ff0101;
+	border-bottom: solid 5px #0F362D;
+	color: white;
+}
+
+tr:nth-child(even){
+	background-color: #ddd;
+}
+
+tr:hover td{
+	background-color: #369681;
+	color: white;
+}   
