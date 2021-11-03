@@ -1,0 +1,4 @@
+function navbar(){
+
+    document.write('')
+}
