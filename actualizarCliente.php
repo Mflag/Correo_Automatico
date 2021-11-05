@@ -1,6 +1,6 @@
 <?php
     include("database.php");
-
+    $id = $_POST["id_cliente"];
     $cuit = $_POST["cuit"];
     $razon_social = strtoupper($_POST["razon_social"]);
     $soporte = strtoupper($_POST["soporte"]);
@@ -8,7 +8,7 @@
     $version = $_POST["version"];
     
 
-    $insertar = "INSERT INTO clientes (id_cliente, cuit, razon_social,soporte, fecha_mesa, id_version) VALUES (NULL,'$cuit', '$razon_social','$soporte', '$fecha_mesa', '$version');";
+    $insertar = "UPDATE clientes SET cuit='$cuit', razon_social='$razon_social', fecha_mesa='$fecha_mesa',soporte='$soporte', id_version='$version' WHERE id_cliente = $id;";
     $resultado = mysqli_query($conexion, $insertar);
     
     
